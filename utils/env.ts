@@ -15,7 +15,7 @@ export const ENVIRONMENTS = {
     },
 
     staging: {
-        baseURL: 'https://wyszukiwarkaregon.stat.gov.pl/appBIR/index.aspx'
+        baseURL : 'https://wyszukiwarkaregon.stat.gov.pl/appBIR/index.aspx'
     }
 };
 
