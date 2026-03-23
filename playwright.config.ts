@@ -8,7 +8,7 @@
 import { defineConfig } from '@playwright/test';
 import { ENV } from './utils/env';
 
-export default defineConfig {
+export default defineConfig ({
 
     testDir: './tests',
 
@@ -24,8 +24,21 @@ export default defineConfig {
         
         trace: 'on',
 
-        video: 'off'
+        video: 'off',
 
+        contextOptions: {
+            recordHar: {
+                path: 'artifacts/network.har'
+            }
+        }
+    },
 
+    reporter: [
+        ['list'],
+        ['html', { open: 'never' }],
+        ['allure-playwright']
+    ],
 
-}
+    outputDir: 'artifacts'
+
+});
