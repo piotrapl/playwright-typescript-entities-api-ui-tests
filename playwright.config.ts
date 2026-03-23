@@ -1,4 +1,3 @@
-// playwright.config.ts
 // contextOptions to jest obiekt, który można przekazać do metody browser.newContext() w Playwright, 
 // by skonfigurować kontekst przeglądarki. Można w nim ustawić różne opcje, jak
 // recordHar - recordHar.path - ścieżka do pliku, w którym zostanie zapisany plik HAR 
@@ -25,7 +24,7 @@ export default defineConfig {
         
         trace: 'on',
 
-        video: 'off',
+        video: 'off'
 
 
 
