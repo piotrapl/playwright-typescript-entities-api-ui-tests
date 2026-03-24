@@ -6,11 +6,10 @@
 //      która po rozwiązaniu (resolve) zwróci obiekt typu ApiResponse.
 // "response =>"- funkcja strzałkowa (arrow function), 
 //      używana jako argument dla metody waitForResponse()
-// response.url().includes('daneSzukaj') - sprawdza, czy URL odpowiedzi zawiera frazę 'daneSzukaj'.
 // response.request().method() === 'POST' - sprawdza, czy metodą żądania HTTP jest POST.
 // response.json() - metoda parsująca odpowiedź jako JSON i zwracająca wynik.
 
-// messageLocator - zmienna, która przechowuje lokalizator elementu na stronie,
+// messageLocator - zmienna przechowująca lokalizator elementu na stronie
 import { Page } from '@playwright/test';
 import { ENV } from '../utils/env';
 import { ApiResponse } from '../types/api.types';
