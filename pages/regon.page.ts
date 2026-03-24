@@ -8,7 +8,7 @@
 //      używana jako argument dla metody waitForResponse()
 // response.url().includes('daneSzukaj') - sprawdza, czy URL odpowiedzi zawiera frazę 'daneSzukaj'.
 // response.request().method() === 'POST' - sprawdza, czy metodą żądania HTTP jest POST.
-// response.json() - metoda parsująca odpowiedź jako JSON i zwraca wynik.
+// response.json() - metoda parsująca odpowiedź jako JSON i zwracająca wynik.
 
 import { Page } from '@playwright/test';
 import { ENV } from '../utils/env';
@@ -32,16 +32,25 @@ export class RegonPage {
                 response.request().method() === 'POST'
         );
 
-    await this.page.locator('#btnSzukaj').click();
+        await this.page.locator('#btnSzukaj').click();
 
-    const response = await responsePromise;
+        const response = await responsePromise;
 
-    const body = await response.json();
+        const body = await response.json();
 
-    return {
-        status: response.status(),
-        body 
-    };
-    
+        return {
+            status: response.status(),
+            body 
+        };
+
     }
+
+    async captureMessage(): Promise<string> {
+
+        const messageLocator  = this.page.locator('#divKomunikat');
+
+        await message.waitFor();
+
+        return await messageLocator.innerText();
+    } 
 }
