@@ -47,7 +47,7 @@ export class RegonPage {
 
     async captureMessage(): Promise<string> {
 
-        const messageLocator  = this.page.locator('#divKomunikat');
+        const messageLocator  = this.page.locator('#divInfoKomunikat');
 
         await message.waitFor();
 
