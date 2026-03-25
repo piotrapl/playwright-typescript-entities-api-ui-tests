@@ -16,6 +16,8 @@ export class RegonFlow {
         //      która może być przypisana do różnych wartości w trakcie działania programu.
         let apiResponse;
 
+        // To jest blok kodu, który wykonuje krok testowy, w którym wyszukujemy REGON i pobieramy odpowiedź z backendu.
+        // nie jest to metoda testowa, ale jest to część większego reużywalnego procesu testowego
         await test.step(`Wyszukaj REGON i pobierz odpowiedź z backendu`, async () => {
             apiResponse = await this.regonPage.searchRegon(regon);
         });
