@@ -24,10 +24,12 @@ export class RegonFlow {
 
         let uiMessage;
 
+        // Krok, w którym: pobieramy wiadomość z interfejsu użytkownika (UI) po wyszukaniu REGON.
         await test.step('Pobierz wiadomość z UI', async () => {
             uiMessage = await this.regonPage.captureMessage();
         });
-        //znak wykrzyknika "!" po nazwie zmiennej - operator non-null assertion w TypeScript, 
+
+        // znak wykrzyknika "!" po nazwie zmiennej - operator non-null assertion w TypeScript, 
         // który mówi kompilatorowi, że zmienna nie jest null ani undefined w tym miejscu kodu. 
         // Oznacza to, że programista jest pewien, że te zmienne mają wartość 
         // i nie będą powodować błędu podczas wykonywania asercji
