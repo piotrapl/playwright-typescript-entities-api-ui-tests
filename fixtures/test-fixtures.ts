@@ -14,7 +14,11 @@ type Fixtures = {
 // Tu - eksportujemy naszą rozszerzoną wersję testu, 
 // która zawiera nasze własne fixture'y. Dzięki temu możemy korzystać z nich w naszych testach, 
 // importując ten plik i używając `test` zamiast `base`.
-export const test = base.extend<Fixture>({
+
+// base.extend<Fixtures> -  metoda, która pozwalalająca rozszerzyć bazowy test o nasze fixture'y.
+// <Fixtures> - to typ, który definiuje strukturę naszych fixture'ów. 
+// tu jest tylko jeden fixture o nazwie `regonFlow`, który jest typu `RegonFlow`.
+export const test = base.extend<Fixtures>({
     regonFlow: async ({ page }, use) => {
 
         const regonPage = new RegonPage(page);
