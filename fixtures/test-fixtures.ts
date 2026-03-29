@@ -18,14 +18,16 @@ type Fixtures = {
 // base.extend<Fixtures> -  metoda, która pozwalalająca rozszerzyć bazowy test o nasze fixture'y.
 // <Fixtures> - to typ, który definiuje strukturę naszych fixture'ów. 
 // tu jest tylko jeden fixture o nazwie `regonFlow`, który jest typu `RegonFlow`.
+
+// "const regonPage" - deklaracja zmiennej, która tworzy nową instancję klasy `RegonPage`,
+//  przekazując do niej obiekt `page`
+
 export const test = base.extend<Fixtures>({
     regonFlow: async ({ page }, use) => {
 
         const regonPage = new RegonPage(page);
         const regonFlow = new RegonFlow(regonPage);
 
-        const   url = 'https://regon.stat.gov.pl/RegonRegonSearch.aspx';
-        await page.goto(url);
         await use(regonFlow);
 
     }
@@ -39,7 +41,7 @@ export const test = base.extend<Fixtures>({
 // async ({ page }, testInfo) => { - to funkcja asynchroniczna (arrow function), \
 // wołana po każdym teście, przyjmująca obiekt z właściwością `page` 
 // (reprezentującą stronę przeglądarki) i `testInfo` (zawierający informacje o teście).
-test.afterEach(async ({ page }, testInfo) => 
+test.afterEach(async ({ page }, testInfo) => {
 
     const screenshot = await page.screenshot();
 
