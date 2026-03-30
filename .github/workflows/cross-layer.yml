@@ -3,7 +3,7 @@
 
 name: CI - Playwright Cross-Layer Testing
 
-# sekcja, która definiuje, kiedy workflow ma być uruchamiany.
+# sekcja definiująca, kiedy workflow ma być uruchamiany.
 
 on:
  push:
