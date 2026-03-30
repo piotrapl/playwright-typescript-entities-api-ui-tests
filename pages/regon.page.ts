@@ -19,7 +19,7 @@ export class RegonPage {
     constructor(public page: Page) { }
 
     async open () {
-        await this.page.goto(ENV.baseUrl);
+        await this.page.goto(ENV.baseURL);
     }
 
     async searchRegon(regon: string): Promise<ApiResponse> {
