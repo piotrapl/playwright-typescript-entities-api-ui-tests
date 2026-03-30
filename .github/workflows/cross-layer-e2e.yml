@@ -23,3 +23,9 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
+
+      - run: npm install
+
+      - run: npm playwright install --with-deps
+
+      - run : npm test
