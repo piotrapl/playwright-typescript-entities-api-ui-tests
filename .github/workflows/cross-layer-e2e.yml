@@ -1,0 +1,10 @@
+# workflow do testowania end-to-end z użyciem Playwright uruchamianego na każdym pushu i pull requestcie. 
+# Testy są wykonywane na różnych warstwach aplikacji
+
+name: CI - Playwright Cross-Layer Testing
+
+# on - to jest sekcja, która definiuje, kiedy workflow ma być uruchamiany.
+
+on:
+ push:
+ pull_request:
