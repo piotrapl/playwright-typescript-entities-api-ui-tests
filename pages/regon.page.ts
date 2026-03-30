@@ -45,6 +45,9 @@ export class RegonPage {
 
     }
 
+// Promise<string> - oznacza, że metoda captureMessage() zwraca obietnicę (Promise),
+//  po rozwiązaniu (resolve) tej obietnicy (Promise), zwróci ona wartość typu string, 
+//  która jest tekstem wewnątrz elementu zlokalizowanego przez messageLocator.
     async captureMessage(): Promise<string> {
 
         const messageLocator  = this.page.locator('#divInfoKomunikat');
