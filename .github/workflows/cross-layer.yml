@@ -16,7 +16,7 @@ jobs:
 # runs-on -  sekcja, która definiuje, na jakim systemie (OS) ma być uruchamiane zadanie. 
     runs-on: ubuntu-latest
 
-  steps:
+    steps:
 
       - uses: actions/checkout@v4
 
@@ -26,14 +26,14 @@ jobs:
 
       - run: npm install
 
-      - run: npm playwright install --with-deps
+      - run: npx playwright install --with-deps
 
-      - run : npm test
+      - run: npm test
 
       - name: Upload Playwright Artifacts
         uses: actions/upload-artifact@v4
         with:
           name: playwright-test-results
-          path:   
+          path: | 
             artifacts
             playwright-report
