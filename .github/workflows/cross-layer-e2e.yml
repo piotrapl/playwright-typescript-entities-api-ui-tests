@@ -11,8 +11,15 @@ on:
 
 # sekcja definiująca zadania do wykonania w ramach workflow.
 jobs:
-
 # zadanie testowe:
   test:
 # runs-on -  sekcja, która definiuje, na jakim systemie (OS) ma być uruchamiane zadanie. 
     runs-on: ubuntu-latest
+
+  steps:
+
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
