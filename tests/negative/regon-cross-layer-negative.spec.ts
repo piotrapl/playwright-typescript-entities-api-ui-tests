@@ -6,6 +6,10 @@ for (const dataset of invalidRegons) {
     
   test(`REGON negative search: ${dataset.regon}`, async ({ regonFlow }) => {
 
+        const result = await regonFlow.searchRegonAndVerify(dataset.regon);
+
+        result.assert();
+
   });
 
 }
