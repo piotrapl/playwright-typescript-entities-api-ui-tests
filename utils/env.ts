@@ -19,6 +19,6 @@ export const ENVIRONMENTS = {
     }
 };
 
-const selectedEnv = process.env.TEST_ENV || 'prod';
+const selectedEnv = 'prod';
 
 export const ENV = ENVIRONMENTS[selectedEnv];
